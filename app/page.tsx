@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from 'react'
 import {
   Bell, BriefcaseBusiness, CalendarDays, Check, ChevronDown, ChevronRight, ClipboardList,
   Compass, FileText, Headphones, House, Lightbulb, MapPin, Menu, Rocket, Search, Settings,
-  ShieldCheck, Sparkles, Trophy, UserRound, UsersRound, GraduationCap, Star, Link2, Heart, Layers3, Bot, Cpu, X, Mail, Phone, MapPinned, Pencil,
+  ShieldCheck, Sparkles, Trophy, UserRound, UsersRound, Star, Link2, Heart, Layers3, Bot, Cpu, X, Mail, Phone, MapPinned, Pencil,
   Plus, ExternalLink, Clock3, CheckCircle2, CircleAlert, LockKeyhole, Camera
 } from 'lucide-react'
 
@@ -18,7 +18,7 @@ const navItems: { label: string; path: View; icon: IconType }[] = [
   { label: 'My Mentor', path: 'mentor', icon: UsersRound }, { label: 'Events & Activities', path: 'events', icon: CalendarDays },
   { label: 'Notifications', path: 'notifications', icon: Bell }, { label: 'Settings', path: 'settings', icon: Settings },
 ]
-const categories = [['Innovation', Lightbulb, 'blue'], ['Startup', Rocket, 'green'], ['Major Project', Sparkles, 'purple'], ['Internship', BriefcaseBusiness, 'orange'], ['Research', Search, 'blue'], ['Mentorship', UsersRound, 'pink'], ['IPR', ShieldCheck, 'green'], ['Drone', Sparkles, 'purple'], ['AI / IoT', Sparkles, 'yellow'], ['Competition', Trophy, 'pink'], ['Fellowship', GraduationCap, 'blue'], ['Workshop', BriefcaseBusiness, 'orange'], ['Scholarship', Trophy, 'green'], ['Volunteering', UsersRound, 'pink'], ['Hackathon', Cpu, 'purple'], ['Conference', Layers3, 'yellow']] as const
+const categories = [['Innovation', Lightbulb, 'blue'], ['Startup', Rocket, 'green'], ['Major Project', Sparkles, 'purple'], ['Internship', BriefcaseBusiness, 'orange'], ['Research', Search, 'blue'], ['Mentorship', UsersRound, 'pink'], ['IPR', ShieldCheck, 'green'], ['Drone', Sparkles, 'purple'], ['AI / IoT', Sparkles, 'yellow'], ['Competition', Trophy, 'pink']] as const
 const opportunityTemplates = [
   ['Competition', Trophy, 'yellow', ['AI/ML', 'Social Impact'], ['AI for Social Impact Hackathon', 'Climate Tech Challenge', 'Campus Impact Cup', 'Future Builders Contest', 'Digital Inclusion Challenge', 'Sustainable Ideas League']],
   ['Internship', BriefcaseBusiness, 'blue', ['IoT', 'Embedded C', 'ESP32'], ['Research Internship – IoT', 'Software Engineering Internship', 'Product Design Internship', 'Data Science Internship', 'Social Impact Internship', 'Robotics Lab Internship']],
@@ -30,12 +30,6 @@ const opportunityTemplates = [
   ['IPR', ShieldCheck, 'green', ['IPR', 'Documentation'], ['Patent Filing Support Program', 'IPR Awareness Workshop', 'Student Patent Clinic', 'Copyright Guidance Cell', 'Prior Art Research Camp', 'Innovation Protection Desk']],
   ['Drone', Bot, 'purple', ['UAV', 'Robotics'], ['Campus Drone Innovation Sprint', 'Drone Technology Workshop', 'UAV Mapping Challenge', 'Autonomous Flight Lab', 'Aerial Robotics Program', 'Drone Safety Fellowship']],
   ['AI / IoT', Cpu, 'yellow', ['IoT', 'Data Science', 'MATLAB'], ['Smart Agriculture Sensor Network', 'AI for Good Lab', 'Connected Devices Challenge', 'Machine Learning Bootcamp', 'Edge AI Research Sprint', 'Intelligent Systems Forum']],
-  ['Fellowship', GraduationCap, 'blue', ['Leadership', 'Learning'], ['SUKHF Leadership Fellowship', 'Emerging Scholars Fellowship', 'Community Builder Fellowship', 'Future Leaders Program', 'Technology Fellows Network', 'Public Impact Fellowship']],
-  ['Workshop', BriefcaseBusiness, 'orange', ['Hands-on', 'Skills'], ['Design Thinking Workshop', 'Python Development Workshop', 'Resume Building Workshop', 'Research Methods Workshop', 'Public Speaking Workshop', 'Entrepreneurship Workshop']],
-  ['Scholarship', Trophy, 'green', ['Education', 'Financial Aid'], ['SUKHF Merit Scholarship', 'Women in STEM Scholarship', 'Innovation Excellence Award', 'Community Impact Scholarship', 'Research Support Scholarship', 'Future Talent Grant']],
-  ['Volunteering', UsersRound, 'pink', ['Community', 'Social Impact'], ['Digital Literacy Volunteers', 'Community Health Drive', 'Campus Green Volunteers', 'Rural Education Program', 'Accessibility Action Team', 'Social Impact Volunteer Corps']],
-  ['Hackathon', Cpu, 'purple', ['Coding', 'Innovation'], ['National Student Hackathon', 'AI Buildathon', 'Open Data Hackathon', 'Climate Code Sprint', 'Women in Tech Hackathon', 'Civic Technology Challenge']],
-  ['Conference', Layers3, 'yellow', ['Knowledge', 'Networking'], ['Student Innovation Conference', 'Future Technology Summit', 'Social Impact Conference', 'Research Leaders Forum', 'Startup Ecosystem Summit', 'Digital Society Symposium']],
 ] as const
 const opportunities = opportunityTemplates.flatMap(([type, icon, tone, tags, titles], categoryIndex) => titles.map((title, index) => ({ title, org: index % 2 ? 'SUKHF' : 'SUKHF Innovation Cell', type, place: index % 3 === 0 ? 'Online' : index % 3 === 1 ? 'Hyderabad' : 'Hybrid', date: `Oct ${15 + ((categoryIndex * 3 + index) % 15)}, 2026`, icon, tone, tags })))
 const applications = [
