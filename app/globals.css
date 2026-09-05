@@ -14,7 +14,6 @@ button:active { transform: translateY(1px) scale(.985); }
 .opportunity:hover, .data-row:hover, .notification-row:hover, .event:hover, .setting-row:hover { background: #f7faff; transform: translateX(3px); }
 .stat-card:hover { box-shadow: 0 10px 24px #234d8614; transform: translateY(-3px); }
 .category-card:hover { box-shadow: 0 8px 18px #234d8612; transform: translateY(-3px); }
-.action-toast { position: fixed; top: 86px; right: 28px; z-index: 10; border: 1px solid #b9d4f8; border-radius: 8px; background: #fff; color: var(--navy); box-shadow: 0 12px 30px #16356624; padding: 11px 16px; font-size: 12px; animation: toast-in .25s ease both; }
 @keyframes panel-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes content-in { from { opacity: 0; } to { opacity: 1; } }
 @keyframes toast-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
