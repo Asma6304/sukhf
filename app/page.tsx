@@ -5,7 +5,7 @@ import {
   Bell, BriefcaseBusiness, CalendarDays, Check, ChevronDown, ChevronRight, ClipboardList,
   Compass, FileText, Headphones, House, Lightbulb, MapPin, Menu, Rocket, Search, Settings,
   ShieldCheck, Sparkles, Trophy, UserRound, UsersRound, GraduationCap, Star, Link2, Heart, Layers3, Bot, Cpu, X, Mail, Phone, MapPinned, Pencil,
-  Plus, ExternalLink, Clock3, CheckCircle2, FolderKanban, CircleAlert, LockKeyhole, Camera, Eye, SlidersHorizontal
+  Plus, ExternalLink, Clock3, CheckCircle2, FolderKanban, Flag, CircleAlert, LockKeyhole, Camera, Eye, SlidersHorizontal
 } from 'lucide-react'
 
 type IconType = typeof House
