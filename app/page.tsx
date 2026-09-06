@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import {
-  Bell, BriefcaseBusiness, CalendarDays, Check, ChevronDown, ChevronRight, ClipboardList,
+  Bell, BriefcaseBusiness, CalendarDays, Check, ChevronDown, ChevronLeft, ChevronRight, ClipboardList,
   Compass, FileText, Headphones, House, Lightbulb, MapPin, Menu, Monitor, Share2, Rocket, Search, Settings,
   ShieldCheck, Sparkles, Trophy, UserRound, UsersRound, GraduationCap, Star, Link2, Heart, Bot, Cpu, X, Mail, Phone, MapPinned, Pencil,
   Plus, ExternalLink, Clock3, CheckCircle2, Flag, CircleAlert, LockKeyhole, Camera, Eye, SlidersHorizontal
