@@ -3,7 +3,7 @@
 @import 'shadcn/tailwind.css';
 
 :root { color-scheme: light; --navy: #102653; --blue: #1768db; --ink: #152652; --muted: #63749c; --line: #e5ecf7; --page: #f8fbff; --green: #12b98d; --orange: #f58b32; --purple: #7652d8; --pink: #dc5a97; --yellow: #d9a500; }
-* { box-sizing: border-box; }
+* { box-sizing: border-box; } body { font-weight: 500; } p, small, label, input, select, textarea, button { font-weight: 500; } h1, h2, h3, h4, strong, b { font-weight: 700; }
 button, .panel, .stat-card, .category-card, .opportunity, .data-row, .notification-row, .event, .setting-row { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, border-color .2s ease; }
 mark { border-radius: 3px; background: #fff0a8; color: var(--navy); padding: 0 2px; }
 button:hover { transform: translateY(-1px); }
