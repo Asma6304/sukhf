@@ -3,8 +3,8 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'SUKHF | Student Opportunity Dashboard',
-  description: 'Explore opportunities, collaborate with mentors and build your journey with SUKHF.',
+  title: 'SUKHF | Building What Comes Next',
+  description: 'SU Knowledge Hub Foundation connects innovators, entrepreneurs and ambitious minds with opportunity, mentorship and impact.',
   generator: 'v0.app',
 }
 
